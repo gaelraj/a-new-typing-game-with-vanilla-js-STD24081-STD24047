@@ -68,7 +68,7 @@ header {
 
 .home_left {
   width: 80%;
-  margin-left: -5%;
+  margin-left: 5%;
   animation-delay: 1s;
   animation: animation1 2s linear; 
   margin-top: 15%;
