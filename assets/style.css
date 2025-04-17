@@ -31,7 +31,7 @@ header {
 }
 .header-logo {
   font-size: 1.4rem;
-  color: #8A2BE2; 
+  color: var(--color-accent); 
   font-weight: bold;
   position: relative;
   white-space: nowrap;
@@ -41,7 +41,7 @@ header {
   display: inline-block;
   width: 10px;
   height: 1.2em;
-  background-color: #8A2BE2;
+  background-color:var(--color-accent);
   margin-left: 5px;
   animation: blink 0.7s steps(1) infinite;
 }
