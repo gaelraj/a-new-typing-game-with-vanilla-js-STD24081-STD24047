@@ -91,6 +91,56 @@ const showFinalResults = () => {
     results.textContent = `Final WPM: ${Wpm}, Accuracy: ${accuracy}%`;
 }
 
+document.addEventListener("keydown",(event) => {
+    startTimer();
+    if (event.key === " ") {
+    
+        if (typedLetter.trim().length > 0 ) {
+            typedLetter = "";
+            currentWordIndex++;
+            highlightCorrectLetters();
+            return;  
+        }
+
+        if(typedLetter.trim().length === 0){
+           if(event.key === " "){
+           event.preventDefault();
+           return;
+           }
+        }
+        
+        if(event.key === " " && currentWordIndex === wordsToType.length - 1 && typedLetter.length >  0){
+            showFinalResults();
+            return;
+        }
+    }
+
+    if (event.key.length === 1) {
+        const targetWord = wordsToType[currentWordIndex];
+        if (typedLetter.length < targetWord.length) {
+            if (event.key === targetWord[typedLetter.length]){
+                correctCharCount++;
+            }
+        }
+        typedLetter += event.key;
+        totalTypedChars++;
+        highlightCorrectLetters();
+    }
+
+    if (event.key === "Backspace") {
+        if (typedLetter.length > 0) {
+            typedLetter = typedLetter.slice(0, -1);
+            totalTypedChars--;
+            highlightCorrectLetters();
+        }
+    }
+
+    if (currentWordIndex === wordsToType.length - 1 && typedLetter.length === wordsToType[currentWordIndex].length) {
+        showFinalResults();
+    }
+
+})
+
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
