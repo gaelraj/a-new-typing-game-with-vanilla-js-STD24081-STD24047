@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand",sans-serif ;
+    font-family: 'Roboto Mono', monospace;
 }
   
 :root {
@@ -20,136 +20,132 @@
 
 body{
     background-color: var(--color-background);
+    height: 100vh;
+    overflow: hidden;
 }
+
 header {
-  padding: 0 10px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation: animation2 2s linear;
+    padding: 0 10px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    animation: headerAnimation 2s linear;
 }
+
 .header-logo {
-  font-size: 1.6rem;
-  color: var(--color-accent); 
-  font-weight: bold;
-  position: relative;
-  white-space: nowrap;
+    font-size: 40px;
+    color: var(--color-text); 
+    font-weight: bold;
 }
 
 .header-cursor {
-  display: inline-block;
-  width: 10px;
-  height: 1.2em;
-  background-color:var(--color-accent);
-  margin-left: 5px;
-  animation: blink 0.7s steps(1) infinite;
+    color: var(--color-accent);
+    animation: cursorAnimation 1s step-start infinite;
 }
-@keyframes blink {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
-  }
+
+@keyframes  cursorAnimation{
+    50% {
+        opacity: 0;
+    }
 }
+
 .home {
-  display: flex;
-  align-items: center;
-  height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    height: calc(100% - 80px);
 }
 
 .home_layout {
-  padding: 0% 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .home_left {
-  width: 80%;
-  margin-left: 5%;
-  animation-delay: 1s;
-  animation: animation1 2s linear; 
-  margin-top: 15%;
+    width: 45%;
+    animation-delay: 1s;
+    animation: fromLeftAnimation 2s linear; 
 }
 
 .home_title {
-  color: #20669d;
-  font-size: 1.3rem;
+    color: #20669d;
+    font-size: 12px;
 }
 
 .home_slogan{
-  color: var(--color-text);
-  margin:20px 0;
-  font-size: 35px;
-  animation-delay: 1s;
-  animation: animation1 2s linear; 
-  animation: animation1 2s linear; 
+    color: var(--color-text);
+    margin:20px 0;
+    font-size: 35px;
+    animation-delay: 1s;
+    animation: fromLeftAnimation 2s linear; 
+    animation: fromLeftAnimation 2s linear; 
 }
 
 .home_description{
-  color: var(--color-text-secondary);
-  font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
 }
 
 .home_left .home_buttons {
-  margin: 30px 0;
-  animation-delay: 3s;
-  animation: animation1 2s linear; 
-}
-
-.homel_left .home_buttons a {
-  padding: 8px 30px;
-  text-decoration: none;
-  font-size: 12px;
+    margin: 30px 0;
+    animation-delay: 3s;
+    animation: fromLeftAnimation 2s linear; 
 }
 
 .home_buttons a {
-  text-decoration: none;
-  color: var(--color-text); 
-  background-color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  padding: 10px 20px; 
-  border-radius: 5px; 
-  display: inline-block; 
-  font-weight: bold; 
-  transition: background-color 0.3s ease; 
+    border-radius: 5px; 
+    padding: 8px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
+
 .home_buttons a:hover {
-  background-color: var(--color-hover); 
-  color: var(--color-text); 
+    background-color: var(--color-hover); 
+    color: var(--color-text); 
 }
 
 .home_right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-  margin-top: 15%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    animation-delay: 2s;
+    animation: fromLeftAnimation 2s alternate;
 }
 
 .home_stats.home_stats-wpm {
-  border: 1px solid var(--color-accent);
-  color: var(--color-text);
-  padding: 10%;
-  width: 12vw;
-  margin-left: 25%;
-  border-radius: 10px;
-  background-color: var(--color-accent);
-  text-align: center; 
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+    padding: 10%;
+    width: 12vw;
+    margin-left: 25%;
+    border-radius: 10px;
+    /*background-color: var(--color-accent);*/
+    text-align: center;
+    box-shadow:
+        0 4px 10px rgba(162, 89, 255, 0.15),
+        0 6px 15px rgba(187, 134, 252, 0.1);
 }
 
 .home_stats.home_stats--accuracy {
-  border: 1px solid var(--color-accent);
-  color: var(--color-text);
-  margin-left: 40%;
-  padding: 10%;
-  width: 12vw;
-  border-radius: 10px;
-  background-color: var(--color-accent);
-  text-align: center; 
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+    margin-left: 40%;
+    padding: 10%;
+    width: 12vw;
+    border-radius: 10px;
+    text-align: center; 
+    box-shadow:
+        0 4px 10px rgba(162, 89, 255, 0.15),
+        0 6px 15px rgba(187, 134, 252, 0.1);
+
 }
+
 
 .home_wpm-count,
 .home_accuracy-count {
@@ -163,13 +159,13 @@ header {
   margin-top: 0; 
 }
 
-@keyframes animation1 {
+@keyframes fromLeftAnimation {
   from{
       transform: translateX(-600px);
   }
 }
 
-@keyframes animation2{
+@keyframes headerAnimation{
   from{
       transform: translateY(-100px);
   }
