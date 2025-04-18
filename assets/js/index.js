@@ -141,12 +141,6 @@ document.addEventListener("keydown",(event) => {
 
 })
 
-// Event listeners
-// Attach `updateWord` to `keydown` instead of `input`
-inputField.addEventListener("keydown", (event) => {
-    startTimer();
-    updateWord(event);
-});
 modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
