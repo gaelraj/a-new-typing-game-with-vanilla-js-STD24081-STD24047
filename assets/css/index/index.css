@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
 }
+
 :root {
     --color-background: #1e1e1e;
     --color-text: #E0E0E0;
@@ -14,17 +16,26 @@
     --color-error: #FF5555;
 }
 
+body {
+    padding: 0 20px; 
+    background-color: var(--color-background);
+    height: 100vh;
+    overflow: hidden;
+}
+
 header {
-    background: #2a2a40;
-    padding: 25px;
-    border-bottom: 2px solid var(--color-accent);
+    border: 2px solid red;
+    padding: 0 10px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
 }
 
 .header-logo {
-    font-family: 'Roboto Mono', monospace;;
     font-size: 40px;
     color: var(--color-text); 
-    font-weight: bold;
 }
 
 .header-cursor {
@@ -37,91 +48,40 @@ header {
         opacity: 0;
     }
 }
-i{
-    color: var(--color-text);
-}
-.header-grid-left {
+
+.header_nav{
+    border: 2px solid red;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.header-logo-title-flex {
+.nav-href-home{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-.header-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--color-hover);
-}
-
-.langue{
-    background:  var(--color-hover);
-    align-items: center;
-    margin: 10px 20px;
-    padding: 12px 24px;
-}
-a{
-    color: var(--color-text);
+.nav-href-home a,.house_icone{
+    color: var(--color-text-secondary);
     text-decoration: none;
-    padding: 12px;
-    font-weight: 650;
-    transition: .3s linear;
-}
-a:hover{
-    background-color: var(--color-background);
-}
-a.active{
-    background: var(--color-accent);
-}
-@keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    align-items: center;
-}
-
-nav li {
-    display: flex;
-    align-items: center;
-}
-
-.nav-href-home, 
-.nav-select-mode, 
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-select-mode {
+.nav-href-home:hover .house_icone{
     color: var(--color-text);
 }
 
-nav a {
+.nav-href-home:hover .nav-href-home-a{
     color: var(--color-text);
-    text-decoration: none;
-    font-weight: 500;
 }
 
-nav a:hover {
-    color: var(--color-hover);
-}
-
-select {
-    background: var(--color-background);
-    color: var(--color-text);
-    border: 1px solid var(--color-accent);
+#mode{
+    background: #2a2a40;
+    color: #f5f5f5;
+    border: 1px solid #5e2ca5;
     padding: 5px;
     border-radius: 5px;
 }
 
+#mode:hover{
+    background-color: var(--color-hover);
+}
