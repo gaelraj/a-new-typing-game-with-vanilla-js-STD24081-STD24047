@@ -141,6 +141,10 @@ document.addEventListener("keydown",(event) => {
 
 })
 
+document.getElementById("refresh_icone").addEventListener("click",() => {
+    startTest();
+})
+
 modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
