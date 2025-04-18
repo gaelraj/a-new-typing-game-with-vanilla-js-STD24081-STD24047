@@ -85,3 +85,26 @@ header {
 #mode:hover{
     background-color: var(--color-hover);
 }
+
+.main-display{
+    border: 2px solid red;
+    margin-inline: 12%;
+    margin-top: 20vh;
+    overflow: hidden;
+    height: 20vh; 
+}
+
+#main-word-display {
+  font-size: xx-large;
+  color: var(--color-text);                 
+  overflow-y: auto;          
+  max-width: 100%;
+  padding: 10px;
+  scroll-behavior: smooth;
+  line-height: 6vh;   
+}
+
+#main-word-display span{
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
