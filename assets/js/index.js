@@ -5,13 +5,13 @@
  * 
  * Sur ce... Amusez-vous bien ! 
  */
-let startTime = null, previousEndTime = null;
+let startTime = null, endTime = null ,correctCharCount = 0,totalTypedChars = 0;
 let currentWordIndex = 0;
+let typedLetter = "";
 const wordsToType = [];
 
 const modeSelect = document.getElementById("mode");
-const wordDisplay = document.getElementById("word-display");
-const inputField = document.getElementById("input-field");
+const wordDisplay = document.getElementById("main-word-display");
 const results = document.getElementById("results");
 
 const words = {
