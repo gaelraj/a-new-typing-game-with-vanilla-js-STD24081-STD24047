@@ -31,8 +31,10 @@ const startTest = (wordCount = 50) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
+    typedLetter = "";
     startTime = null;
-    previousEndTime = null;
+    correctCharCount = 0;
+    totalTypedChars = 0;
 
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
@@ -41,11 +43,8 @@ const startTest = (wordCount = 50) => {
     wordsToType.forEach((word, index) => {
         const span = document.createElement("span");
         span.textContent = word + " ";
-        if (index === 0) span.style.color = "red"; // Highlight first word
         wordDisplay.appendChild(span);
     });
-
-    inputField.value = "";
     results.textContent = "";
 };
 
