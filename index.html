@@ -6,18 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Test</title>
     <link rel="stylesheet" href="assets/css/index/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
+        <div class="header-grid-left">
+             <div>
+                <h4 class="header-logo">TypeViolet<span class="header-cursor">|</span></h4>
+             </div> 
+             <nav>
+                 <ul>
+                     <li>
+                         <div class="nav-href-home">
+                             <i class="fa-solid fa-house"></i>
+                             <a href="index-1.html" >Home</a>   
+                         </div>
+                     </li>    
+                     <li>
+                         <div class="nav-select-mode">
+                             <label for="mode">Select Mode :</label>
+                             <select id="mode">
+                                 <option value="easy">Easy</option>
+                                 <option value="medium">Medium</option>
+                                 <option value="hard">Hard</option>
+                             </select>        
+                             </div>
+                     </li>
+                     <li>
+                         <div class="nav-href-langue">
+                             <a href="#" Language="English" class="active">ENG</a>
+                             <a href="#" Language="Francais">FRS</a>
+                             <a href="#" Language="Espanol">SPAN</a>
+                         </div>
+                     </li>
+                     
+                 </ul>
+             </nav>
+        </div>     
+     </header>
 
     <main>
         <p id="word-display"></p>
