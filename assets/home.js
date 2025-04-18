@@ -1,10 +1,10 @@
 window.onload = () => {
     const compter = document.querySelector(".home_accuracy-count");
-    animatecompter(compter, 8000);
+    animatecompter(compter, 2000);
 }
 function animatecompter(compter, duration) {
     let startValue = 0;
-    let endValue = 100;
+    let endValue = 90;
     let increment = endValue / (duration / 100); 
     let currentValue = startValue;
 
@@ -19,7 +19,7 @@ function animatecompter(compter, duration) {
     }, 100);
 
     const comptWpm = document.querySelector(".home_wpm-count");
-    animateCounter(comptWpm, 70, 8000);
+    animateCounter(comptWpm, 30, 2000);
     
     function animateCounter(element, targetValue, duration) {
         let currentValue = 0;
