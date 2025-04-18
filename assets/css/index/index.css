@@ -108,3 +108,21 @@ header {
   opacity: 0.5;
   transition: opacity 0.2s ease;
 }
+
+.restart_icone{
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.refresh_icone{
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.refresh_icone:hover{
+  color: var(--color-text);
+  transform: rotate(90deg);
+}
