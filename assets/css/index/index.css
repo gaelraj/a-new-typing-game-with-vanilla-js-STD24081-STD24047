@@ -3,3 +3,125 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --color-background: #1e1e1e;
+    --color-text: #E0E0E0;
+    --color-text-secondary: #AAAAAA;
+  
+    --color-accent: #A259FF;
+    --color-hover: #BB86FC;
+    --color-success: #50FA7B;
+    --color-error: #FF5555;
+}
+
+header {
+    background: #2a2a40;
+    padding: 25px;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.header-logo {
+    font-family: 'Roboto Mono', monospace;;
+    font-size: 40px;
+    color: var(--color-text); 
+    font-weight: bold;
+}
+
+.header-cursor {
+    color: var(--color-accent);
+    animation: cursorAnimation 1s step-start infinite;
+}
+
+@keyframes  cursorAnimation{
+    50% {
+        opacity: 0;
+    }
+}
+i{
+    color: var(--color-text);
+}
+.header-grid-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-logo-title-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-hover);
+}
+
+.langue{
+    background:  var(--color-hover);
+    align-items: center;
+    margin: 10px 20px;
+    padding: 12px 24px;
+}
+a{
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 650;
+    transition: .3s linear;
+}
+a:hover{
+    background-color: var(--color-background);
+}
+a.active{
+    background: var(--color-accent);
+}
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-href-home, 
+.nav-select-mode, 
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-select-mode {
+    color: var(--color-text);
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--color-hover);
+}
+
+select {
+    background: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+    padding: 5px;
+    border-radius: 5px;
+}
+
