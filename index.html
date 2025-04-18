@@ -11,40 +11,22 @@
 
 <body>
     <header>
-        <div class="header-grid-left">
-             <div>
-                <h4 class="header-logo">TypeViolet<span class="header-cursor">|</span></h4>
-             </div> 
-             <nav>
-                 <ul>
-                     <li>
-                         <div class="nav-href-home">
-                             <i class="fa-solid fa-house"></i>
-                             <a href="home.html" >Home</a>   
-                         </div>
-                     </li>    
-                     <li>
-                         <div class="nav-select-mode">
-                             <label for="mode">Select Mode :</label>
-                             <select id="mode">
-                                 <option value="easy">Easy</option>
-                                 <option value="medium">Medium</option>
-                                 <option value="hard">Hard</option>
-                             </select>        
-                             </div>
-                     </li>
-                     <li>
-                         <div class="nav-href-langue">
-                             <a href="#" Language="English" class="active">ENG</a>
-                             <a href="#" Language="Francais">FRS</a>
-                             <a href="#" Language="Espanol">SPAN</a>
-                         </div>
-                     </li>
-                     
-                 </ul>
-             </nav>
-        </div>     
-     </header>
+        <h4 class="header-logo">TypeViolet<span class="header-cursor">|</span></h4>
+        <div class="header_nav">
+            <nav class="nav-href-home">
+                <i class="fa-solid fa-house house_icone"></i>
+                <a href="index-1.html" class="nav-href-home-a">Home</a>   
+            </nav>
+            <div>
+                <label for="mode">Select Mode:</label>
+                <select id="mode">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+    </header>
 
     <main>
         <p id="word-display"></p>
