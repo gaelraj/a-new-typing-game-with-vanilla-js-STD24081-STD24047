@@ -53,18 +53,6 @@ const startTimer = () => {
     if (!startTime) startTime = Date.now();
 };
 
-// Highlight the current word in red
-const highlightNextWord = () => {
-    const wordElements = wordDisplay.children;
-
-    if (currentWordIndex < wordElements.length) {
-        if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "black";
-        }
-        wordElements[currentWordIndex].style.color = "red";
-    }
-};
-
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
