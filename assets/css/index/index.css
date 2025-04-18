@@ -126,3 +126,7 @@ header {
   color: var(--color-text);
   transform: rotate(90deg);
 }
+
+#results{
+    color: var(--color-text);
+}
