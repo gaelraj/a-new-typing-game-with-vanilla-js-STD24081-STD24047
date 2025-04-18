@@ -84,6 +84,13 @@ const highlightCorrectLetters = () => {
     
 };
 
+const showFinalResults = () => {
+    const finalElapsedTime = (Date.now() - startTime) / 1000;
+    const Wpm = Math.round((correctCharCount / 5) / (finalElapsedTime / 60));
+    const accuracy = totalTypedChars > 0 ? Math.round((correctCharCount / totalTypedChars) * 100) : 0;
+    results.textContent = `Final WPM: ${Wpm}, Accuracy: ${accuracy}%`;
+}
+
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
