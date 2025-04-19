@@ -98,6 +98,11 @@ document.addEventListener("keydown",(event) => {
     startTimer();
     if (event.key === " ") {
     
+        if(event.key === " " && currentWordIndex === wordsToType.length - 1 && typedLetter.length >  0){
+            showFinalResults();
+            return;
+        }
+
         if (typedLetter.trim().length > 0 ) {
             typedLetter = "";
             currentWordIndex++;
@@ -110,11 +115,6 @@ document.addEventListener("keydown",(event) => {
            event.preventDefault();
            return;
            }
-        }
-        
-        if(event.key === " " && currentWordIndex === wordsToType.length - 1 && typedLetter.length >  0){
-            showFinalResults();
-            return;
         }
     }
 
@@ -137,11 +137,6 @@ document.addEventListener("keydown",(event) => {
             highlightCorrectLetters();
         }
     }
-
-    if (currentWordIndex === wordsToType.length - 1 && typedLetter.length === wordsToType[currentWordIndex].length) {
-        showFinalResults();
-    }
-
 })
 
 document.getElementById("refresh_icone").addEventListener("click",() => {
