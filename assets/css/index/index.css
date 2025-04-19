@@ -7,6 +7,8 @@
 
 :root {
     --color-background: #1e1e1e;
+    --color-background-secondary: #2a2a40;
+
     --color-text: #E0E0E0;
     --color-text-secondary: #AAAAAA;
   
@@ -75,14 +77,15 @@ header {
 }
 
 #mode{
-    background: #2a2a40;
-    color: #f5f5f5;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
     border: 1px solid #5e2ca5;
     padding: 5px;
     border-radius: 5px;
 }
 
 #mode:hover{
+    color: var(--color-text);
     background-color: var(--color-hover);
 }
 
