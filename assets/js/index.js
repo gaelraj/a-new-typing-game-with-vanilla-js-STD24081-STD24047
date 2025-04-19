@@ -147,6 +147,15 @@ document.getElementById("refresh_icone").addEventListener("click",() => {
     startTest(selectedCount);
 })
 
+const getWordCount = () => {
+    const selectedCount = parseInt(wordCountSelect.value);
+    startTest(selectedCount);
+}
+
+wordCountSelect.addEventListener("change",() => {
+    getWordCount();
+})
+
 modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
