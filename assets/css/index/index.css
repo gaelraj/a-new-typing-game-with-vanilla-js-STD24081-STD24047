@@ -77,17 +77,34 @@ header {
     color: var(--color-text);
 }
 
-#mode{
+#mode,/*sdf*/
+#setting-panel_word-count{
     background: var(--color-background-secondary);
     color: var(--color-text-secondary);
     border: 1px solid #5e2ca5;
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
 }
 
-#mode:hover{
+#mode:hover,
+#setting-panel_word-count:hover{
     color: var(--color-text);
     background-color: var(--color-hover);
+}
+
+.setting-panel{
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid red;
+    margin-inline: 15%;
+}
+
+.setting-panel_wordCount{
+    border: 2px solid green;
+    color: var(--color-text);
+    position: relative;
+    bottom: 0;
+    right: 0;
 }
 
 .main-display{
