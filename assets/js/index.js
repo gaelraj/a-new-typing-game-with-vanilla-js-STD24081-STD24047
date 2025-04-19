@@ -152,6 +152,10 @@ const getWordCount = () => {
     startTest(selectedCount);
 }
 
+document.querySelector(".nav-href-home").addEventListener("click", () =>  {
+    window.location.href = "home.html";
+})
+
 wordCountSelect.addEventListener("change",getWordCount);
 
 wordCountSelect.addEventListener("click", getWordCount);
