@@ -13,6 +13,7 @@ const wordsToType = [];
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("main-word-display");
 const results = document.getElementById("results");
+const wordCountSelect = document.getElementById("setting-panel_word-count");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -27,7 +28,7 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-const startTest = (wordCount = 50) => {
+const startTest = (wordCount = 25) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
@@ -142,7 +143,8 @@ document.addEventListener("keydown",(event) => {
 })
 
 document.getElementById("refresh_icone").addEventListener("click",() => {
-    startTest();
+    const selectedCount = parseInt(wordCountSelect.value);
+    startTest(selectedCount);
 })
 
 modeSelect.addEventListener("change", () => startTest());
