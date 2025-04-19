@@ -54,9 +54,9 @@ const startTimer = () => {
 };
 
 const highlightCorrectLetters = () => {
-    const targetWord = wordsToType[currentWordIndex]; // Le mot à taper
-    const wordElements = wordDisplay.children;        // Tous les mots affichés
-    const currentWordSpan = wordElements[currentWordIndex]; // Le <span> du mot courant
+    const targetWord = wordsToType[currentWordIndex]; 
+    const wordElements = wordDisplay.children;        
+    const currentWordSpan = wordElements[currentWordIndex];
     let letterSpan = "";
     let opacityStyle =  "opacity: 1;";
    
@@ -97,6 +97,8 @@ const showFinalResults = () => {
 document.addEventListener("keydown",(event) => {
     startTimer();
 
+    const displayContainer = document.querySelector(".main-display");
+    
     if (event.key === " ") {
     
         if(event.key === " " && currentWordIndex === wordsToType.length - 1 && typedLetter.length >  0){
@@ -124,16 +126,24 @@ document.addEventListener("keydown",(event) => {
         if (typedLetter.length < targetWord.length) {
             if (event.key === targetWord[typedLetter.length]){
                 correctCharCount++;
+                displayContainer.classList.add("flash-correct");
+                setTimeout(() => displayContainer.classList.remove("flash-correct"), 150);
+            }else {
+                displayContainer.classList.add("flash-error");
+                setTimeout(() => displayContainer.classList.remove("flash-error"), 150);
             }
         }
         typedLetter += event.key;
         totalTypedChars++;
         highlightCorrectLetters();
+        console.log(typedLetter,typedLetter.length,correctCharCount);
+        
     }
 
     if (event.key === "Backspace") {
         if (typedLetter.length > 0) {
             typedLetter = typedLetter.slice(0, -1);
+            correctCharCount--;
             totalTypedChars--;
             highlightCorrectLetters();
         }
