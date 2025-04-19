@@ -12,7 +12,6 @@ const wordsToType = [];
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("main-word-display");
-const results = document.getElementById("results");
 const wordCountSelect = document.getElementById("setting-panel_word-count");
 
 const words = {
@@ -89,7 +88,10 @@ const showFinalResults = () => {
     const finalElapsedTime = (Date.now() - startTime) / 1000;
     const Wpm = Math.round((correctCharCount / 5) / (finalElapsedTime / 60));
     const accuracy = totalTypedChars > 0 ? Math.round((correctCharCount / totalTypedChars) * 100) : 0;
-    results.textContent = `Final WPM: ${Wpm}, Accuracy: ${accuracy}%`;
+    const resultsContainer = document.getElementById("results-container");
+    const resultsText = document.getElementById("results");
+    results.textContent = `WPM: ${Wpm},  Accuracy: ${accuracy}%`;
+    resultsContainer.classList.add("active");
 }
 
 document.addEventListener("keydown",(event) => {
@@ -143,11 +145,15 @@ document.addEventListener("keydown",(event) => {
 })
 
 document.getElementById("refresh_icone").addEventListener("click",() => {
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.classList.remove("active");
     const selectedCount = parseInt(wordCountSelect.value);
     startTest(selectedCount);
 })
 
 const getWordCount = () => {
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.classList.remove("active");
     const selectedCount = parseInt(wordCountSelect.value);
     startTest(selectedCount);
 }
