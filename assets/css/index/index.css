@@ -77,7 +77,7 @@ header {
     color: var(--color-text);
 }
 
-#mode,/*sdf*/
+#mode,
 #setting-panel_word-count{
     background: var(--color-background-secondary);
     color: var(--color-text-secondary);
@@ -95,7 +95,6 @@ header {
 .setting-panel{
     display: flex;
     justify-content: flex-end;
-    border: 2px solid red;
     margin-inline: 15%;
 }
 
@@ -108,11 +107,14 @@ header {
 }
 
 .main-display{
-    border: 2px solid red;
     margin-inline: 12%;
     margin-top: 20vh;
     overflow: hidden;
-    height: 20vh; 
+    height: 20vh;
+    border: 2px solid transparent;
+    padding: 20px;
+    border-radius: 10px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 #main-word-display {
@@ -131,7 +133,6 @@ header {
 }
 
 .restart_icone{
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   margin-top: 10vh;
@@ -175,4 +176,14 @@ header {
 #results-container.active {
     display: block;
     opacity: 1;  
+}
+
+.flash-correct {
+    border-color: var(--color-success);
+    box-shadow: 0 0 6px 2px rgba(80, 250, 123, 0.4);
+}
+
+.flash-error {
+    border-color: var(--color-error);
+    box-shadow: 0 0 6px 2px rgba(255, 85, 85, 0.4);
 }

@@ -96,6 +96,7 @@ const showFinalResults = () => {
 
 document.addEventListener("keydown",(event) => {
     startTimer();
+
     if (event.key === " ") {
     
         if(event.key === " " && currentWordIndex === wordsToType.length - 1 && typedLetter.length >  0){
@@ -136,6 +137,11 @@ document.addEventListener("keydown",(event) => {
             totalTypedChars--;
             highlightCorrectLetters();
         }
+    }
+
+    if (currentWordIndex === wordsToType.length - 1 && typedLetter.length === wordsToType[currentWordIndex].length) {
+        showFinalResults();
+        return;
     }
 })
 
