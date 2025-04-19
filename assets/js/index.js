@@ -136,8 +136,6 @@ document.addEventListener("keydown",(event) => {
         typedLetter += event.key;
         totalTypedChars++;
         highlightCorrectLetters();
-        console.log(typedLetter,typedLetter.length,correctCharCount);
-        
     }
 
     if (event.key === "Backspace") {

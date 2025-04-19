@@ -26,7 +26,6 @@ body {
 }
 
 header {
-    border: 2px solid red;
     padding: 0 10px;
     height: 90px;
     display: flex;
@@ -52,7 +51,6 @@ header {
 }
 
 .header_nav{
-    border: 2px solid red;
     display: flex;
     gap: 30px;
 }
@@ -94,12 +92,13 @@ header {
 
 .setting-panel{
     display: flex;
-    justify-content: flex-end;
-    margin-inline: 15%;
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+    margin-inline: 20%;
 }
 
 .setting-panel_wordCount{
-    border: 2px solid green;
     color: var(--color-text);
     position: relative;
     bottom: 0;
