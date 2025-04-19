@@ -152,9 +152,9 @@ const getWordCount = () => {
     startTest(selectedCount);
 }
 
-wordCountSelect.addEventListener("change",() => {
-    getWordCount();
-})
+wordCountSelect.addEventListener("change",getWordCount);
+
+wordCountSelect.addEventListener("click", getWordCount);
 
 modeSelect.addEventListener("change", () => startTest());
 
